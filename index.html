@@ -1,0 +1,1546 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>My Love Proposal ❤️</title>
+
+<style>
+*{
+    margin:0;
+    padding:0;
+    box-sizing:border-box;
+}
+
+html{
+    scroll-behavior:smooth;
+}
+
+body{
+    font-family:"Segoe UI",Arial,sans-serif;
+    background:#ff758c;
+    color:white;
+    overflow-x:hidden;
+}
+
+section{
+    min-height:100vh;
+    display:flex;
+    justify-content:center;
+    align-items:center;
+    text-align:center;
+    padding:40px 18px;
+    position:relative;
+}
+
+.container{
+    width:100%;
+    max-width:900px;
+    margin:auto;
+}
+
+h1{
+    font-size:clamp(2.4rem,8vw,5rem);
+    margin-bottom:20px;
+}
+
+h2{
+    font-size:clamp(1.8rem,6vw,3.2rem);
+    margin-bottom:20px;
+}
+
+p{
+    font-size:clamp(1rem,3vw,1.25rem);
+    line-height:1.7;
+}
+
+/* =========================
+   HERO
+========================= */
+
+.hero{
+    background:
+        radial-gradient(circle at top left,
+        rgba(255,255,255,.25),
+        transparent 30%),
+        linear-gradient(135deg,#ff416c,#ff4b2b);
+}
+
+.hero-content{
+    animation:fadeIn 2s ease;
+}
+
+.big-heart{
+    font-size:clamp(5rem,20vw,10rem);
+    animation:heartbeat 1.4s infinite;
+    filter:drop-shadow(0 10px 20px rgba(0,0,0,.2));
+}
+
+.subtitle{
+    margin-bottom:30px;
+}
+
+.scroll-btn{
+    display:inline-block;
+    margin-top:25px;
+    padding:14px 28px;
+    border-radius:50px;
+    background:white;
+    color:#ff416c;
+    text-decoration:none;
+    font-weight:bold;
+    transition:.3s;
+}
+
+.scroll-btn:hover{
+    transform:scale(1.08);
+}
+
+/* =========================
+   GLASS
+========================= */
+
+.glass{
+    background:rgba(255,255,255,.15);
+    backdrop-filter:blur(12px);
+    -webkit-backdrop-filter:blur(12px);
+    border-radius:25px;
+    box-shadow:0 20px 50px rgba(0,0,0,.2);
+}
+
+/* =========================
+   LOVE LETTER
+========================= */
+
+.love-letter{
+    background:linear-gradient(135deg,#ff758c,#ff7eb3);
+}
+
+.letter{
+    padding:40px 30px;
+}
+
+.letter p{
+    margin-bottom:18px;
+}
+
+/* =========================
+   LOVE QUOTES
+========================= */
+
+.love-quotes{
+    background:linear-gradient(135deg,#8e2de2,#ff416c);
+}
+
+.quote-box{
+    padding:45px 30px;
+}
+
+.quote-symbol{
+    font-family:Georgia,serif;
+    font-size:6rem;
+    line-height:.7;
+    opacity:.35;
+}
+
+#quoteText{
+    font-size:clamp(1.3rem,4.5vw,2rem);
+    font-style:italic;
+    max-width:750px;
+    margin:20px auto;
+}
+
+.quote-author{
+    opacity:.8;
+    margin:10px 0 25px;
+}
+
+.quote-btn{
+    background:white;
+    color:#d63384;
+}
+
+/* =========================
+   EMOTIONAL LETTER
+========================= */
+
+.extra-letter{
+    background:linear-gradient(135deg,#ff6a88,#ff99ac);
+}
+
+.emotional-letter{
+    padding:40px 30px;
+}
+
+.emotional-letter p{
+    margin:18px 0;
+}
+
+.big-emotional{
+    font-size:clamp(1.15rem,4vw,1.6rem);
+}
+
+.signature{
+    font-style:italic;
+    font-size:1.2rem;
+    margin-top:25px;
+}
+
+/* =========================
+   QUESTIONS
+========================= */
+
+.questions{
+    background:linear-gradient(135deg,#c471ed,#f64f59);
+}
+
+.question-box{
+    padding:40px 25px;
+}
+
+.question{
+    display:none;
+    animation:fadeIn .7s ease;
+}
+
+.question.active{
+    display:block;
+}
+
+.question-number{
+    margin-bottom:15px;
+    opacity:.75;
+    font-size:.95rem;
+}
+
+.question h2{
+    font-size:clamp(1.5rem,5vw,2.5rem);
+}
+
+.answers{
+    display:flex;
+    justify-content:center;
+    gap:15px;
+    flex-wrap:wrap;
+    margin-top:25px;
+}
+
+button{
+    border:none;
+    cursor:pointer;
+    font-size:1rem;
+    font-weight:bold;
+    padding:14px 28px;
+    border-radius:50px;
+    transition:.3s;
+}
+
+button:hover{
+    transform:scale(1.08);
+}
+
+.yes{
+    background:white;
+    color:#f64f59;
+}
+
+.no{
+    background:rgba(255,255,255,.2);
+    color:white;
+}
+
+/* =========================
+   PROPOSAL
+========================= */
+
+.proposal{
+    background:
+        radial-gradient(circle at center,
+        rgba(255,255,255,.18),
+        transparent 40%),
+        linear-gradient(135deg,#ff0844,#ffb199);
+}
+
+.teddy{
+    font-size:clamp(6rem,25vw,12rem);
+    margin:20px 0;
+    animation:teddyBounce 2s infinite;
+}
+
+.ring{
+    font-size:clamp(3rem,12vw,6rem);
+    animation:ringGlow 1.5s infinite;
+    margin-bottom:20px;
+}
+
+.proposal-text{
+    font-size:clamp(1.5rem,5vw,2.8rem);
+    font-weight:bold;
+    margin-bottom:30px;
+}
+
+.proposal-buttons{
+    position:relative;
+    min-height:120px;
+}
+
+#yesBtn{
+    background:white;
+    color:#ff0844;
+    margin:10px;
+}
+
+#noBtn{
+    background:rgba(0,0,0,.2);
+    color:white;
+    margin:10px;
+    touch-action:manipulation;
+}
+
+/* =========================
+   SUCCESS
+========================= */
+
+.success{
+    display:none;
+    position:fixed;
+    inset:0;
+    z-index:999;
+    background:rgba(255,20,80,.97);
+    justify-content:center;
+    align-items:center;
+    padding:20px;
+    overflow:hidden;
+}
+
+.success.show{
+    display:flex;
+}
+
+.success-box{
+    max-width:750px;
+    animation:successPop 1s ease;
+}
+
+.success-heart{
+    font-size:clamp(5rem,25vw,12rem);
+    animation:heartbeat 1s infinite;
+}
+
+.kiss{
+    font-size:clamp(3rem,15vw,7rem);
+    margin:20px;
+    animation:kiss 1.2s infinite alternate;
+}
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+.heart{
+    position:fixed;
+    bottom:-50px;
+    pointer-events:none;
+    animation:floatHeart linear forwards;
+    z-index:5;
+}
+
+/* =========================
+   CONFETTI
+========================= */
+
+.confetti{
+    position:fixed;
+    top:-30px;
+    z-index:2000;
+    pointer-events:none;
+    animation:confettiFall linear forwards;
+}
+
+/* =========================
+   MUSIC
+========================= */
+
+.music-btn{
+    position:fixed;
+    right:18px;
+    bottom:18px;
+    z-index:1000;
+    width:52px;
+    height:52px;
+    padding:0;
+    border-radius:50%;
+    background:white;
+    color:#ff416c;
+    box-shadow:0 8px 20px rgba(0,0,0,.2);
+}
+
+/* =========================
+   ANIMATIONS
+========================= */
+
+@keyframes heartbeat{
+    0%,100%{
+        transform:scale(1);
+    }
+
+    25%{
+        transform:scale(1.12);
+    }
+
+    50%{
+        transform:scale(.98);
+    }
+
+    75%{
+        transform:scale(1.08);
+    }
+}
+
+@keyframes fadeIn{
+    from{
+        opacity:0;
+        transform:translateY(30px);
+    }
+
+    to{
+        opacity:1;
+        transform:translateY(0);
+    }
+}
+
+@keyframes teddyBounce{
+    0%,100%{
+        transform:translateY(0);
+    }
+
+    50%{
+        transform:translateY(-15px) rotate(-3deg);
+    }
+}
+
+@keyframes ringGlow{
+    0%,100%{
+        transform:scale(1);
+        filter:drop-shadow(0 0 5px gold);
+    }
+
+    50%{
+        transform:scale(1.15);
+        filter:drop-shadow(0 0 30px gold);
+    }
+}
+
+@keyframes successPop{
+    from{
+        transform:scale(.3);
+        opacity:0;
+    }
+
+    to{
+        transform:scale(1);
+        opacity:1;
+    }
+}
+
+@keyframes kiss{
+    from{
+        transform:scale(1) rotate(-5deg);
+    }
+
+    to{
+        transform:scale(1.2) rotate(5deg);
+    }
+}
+
+@keyframes floatHeart{
+    from{
+        transform:translateY(0) rotate(0deg);
+        opacity:1;
+    }
+
+    to{
+        transform:translateY(-110vh) rotate(360deg);
+        opacity:0;
+    }
+}
+
+@keyframes confettiFall{
+    to{
+        transform:translateY(110vh) rotate(720deg);
+        opacity:0;
+    }
+}
+
+/* =========================
+   MOBILE
+========================= */
+
+@media(max-width:600px){
+
+    section{
+        min-height:100svh;
+        padding:30px 15px;
+    }
+
+    .letter,
+    .question-box,
+    .quote-box,
+    .emotional-letter{
+        padding:28px 18px;
+    }
+
+    .answers{
+        flex-direction:column;
+        align-items:center;
+    }
+
+    .answers button{
+        width:90%;
+        max-width:320px;
+    }
+
+    .proposal-buttons{
+        min-height:150px;
+    }
+}
+</style>
+</head>
+
+<body>
+
+<!-- =========================
+     HERO
+========================= -->
+
+<section class="hero">
+
+    <div class="container hero-content">
+
+        <div class="big-heart">❤️</div>
+
+        <h1>For The Love Of My Life</h1>
+
+        <p class="subtitle">
+            I have something very special to tell you...
+        </p>
+
+        <a href="#letter" class="scroll-btn">
+            Open My Heart 💌
+        </a>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE LETTER
+========================= -->
+
+<section class="love-letter" id="letter">
+
+    <div class="container">
+
+        <div class="glass letter">
+
+            <h2>My Love Letter 💌</h2>
+
+            <p>
+                From the moment you came into my life,
+                everything became a little more beautiful.
+            </p>
+
+            <p>
+                Your smile makes my bad days better.
+                Your voice brings peace to my heart.
+                And your presence makes ordinary moments magical.
+            </p>
+
+            <p>
+                I don't know what the future holds...
+                but I know who I want beside me.
+            </p>
+
+            <p>
+                <strong>You. ❤️</strong>
+            </p>
+
+            <a href="#quotes" class="scroll-btn">
+                Continue 💕
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     LOVE QUOTES
+========================= -->
+
+<section class="love-quotes" id="quotes">
+
+    <div class="container">
+
+        <div class="glass quote-box">
+
+            <div class="quote-symbol">“</div>
+
+            <h2>
+                Little Things My Heart Wants To Say 🌹
+            </h2>
+
+            <p id="quoteText">
+                “You are the kind of person who makes
+                ordinary moments feel extraordinary. ❤️”
+            </p>
+
+            <div id="quoteAuthor" class="quote-author">
+                — From my heart ❤️
+            </div>
+
+            <button class="quote-btn" onclick="nextQuote()">
+                Another Love Quote 💕
+            </button>
+
+            <br>
+
+            <a href="#emotional" class="scroll-btn">
+                Read Something From My Heart 💌
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     EMOTIONAL LETTER
+========================= -->
+
+<section class="extra-letter" id="emotional">
+
+    <div class="container">
+
+        <div class="glass emotional-letter">
+
+            <h2>
+                A Little Letter For You... 🥺❤️
+            </h2>
+
+            <p>
+                There are so many things I could say,
+                but somehow my heart always comes back
+                to one simple thought:
+            </p>
+
+            <p>
+                <strong>
+                    I am grateful that you exist in my world.
+                </strong>
+            </p>
+
+            <p>
+                Thank you for every smile, every conversation,
+                every silly moment and every little memory
+                that became special just because you were there.
+            </p>
+
+            <p>
+                If life is a long road, I don't need to know
+                every destination. I just want to hold your hand
+                while we discover it together.
+            </p>
+
+            <p>
+                When you're happy, I want to celebrate with you.
+                When you're tired, I want to be your safe place.
+                When you're scared, I want you to know you never
+                have to face everything alone.
+            </p>
+
+            <p>
+                And when we're old, I hope we can look back and say:
+            </p>
+
+            <p class="big-emotional">
+                <strong>
+                    “We laughed a lot. We loved deeply.
+                    And we chose each other every day.” ❤️
+                </strong>
+            </p>
+
+            <p class="signature">
+                Forever sounds beautiful when I imagine it with you. 💍
+            </p>
+
+            <a href="#questions" class="scroll-btn">
+                One More Thing... 💕
+            </a>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     ROMANTIC QUESTIONS
+========================= -->
+
+<section class="questions" id="questions">
+
+    <div class="container">
+
+        <div class="glass question-box">
+
+
+            <!-- QUESTION 1 -->
+
+            <div class="question active" id="q1">
+
+                <div class="question-number">
+                    Question 1 of 12 💕
+                </div>
+
+                <h2>
+                    If I suddenly appeared in front of you,
+                    what would you do first? 🥰
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(1)">
+                        Give me a big hug 🤗
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(1)">
+                        Act normal... then secretly smile 😏
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 2 -->
+
+            <div class="question" id="q2">
+
+                <div class="question-number">
+                    Question 2 of 12 💕
+                </div>
+
+                <h2>
+                    If we had a whole day together with no plans,
+                    what should we do? 🌸
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(2)">
+                        Cuddle, talk & laugh ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(2)">
+                        Food first. Romance later 😂
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 3 -->
+
+            <div class="question" id="q3">
+
+                <div class="question-number">
+                    Question 3 of 12 💕
+                </div>
+
+                <h2>
+                    Who would win an argument between us? 😌
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(3)">
+                        You, because you're adorable 😍
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(3)">
+                        Me... obviously 😎
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 4 -->
+
+            <div class="question" id="q4">
+
+                <div class="question-number">
+                    Question 4 of 12 💕
+                </div>
+
+                <h2>
+                    Would you hold my hand during a
+                    late-night walk under the stars? 🌙✨
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(4)">
+                        Of course ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(4)">
+                        Only if you bring snacks 😂
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 5 -->
+
+            <div class="question" id="q5">
+
+                <div class="question-number">
+                    Question 5 of 12 💕
+                </div>
+
+                <h2>
+                    If I had a terrible day, would you stay beside
+                    me until I smiled again? 🥺
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(5)">
+                        Always. No matter what ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(5)">
+                        I'll attack the bad day with hugs 🤗
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 6 -->
+
+            <div class="question" id="q6">
+
+                <div class="question-number">
+                    Question 6 of 12 💕
+                </div>
+
+                <h2>
+                    Would you let me annoy you for
+                    the rest of our lives? 😂❤️
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(6)">
+                        Yes, forever 🥰
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(6)">
+                        I already made that mistake 😂
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 7 -->
+
+            <div class="question" id="q7">
+
+                <div class="question-number">
+                    Question 7 of 12 💕
+                </div>
+
+                <h2>
+                    When we're old and sitting together,
+                    would you still laugh at my silly jokes? 👵🏻👴🏻
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(7)">
+                        Every single time ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(7)">
+                        I'll pretend they're funny 😂
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 8 -->
+
+            <div class="question" id="q8">
+
+                <div class="question-number">
+                    Question 8 of 12 💕
+                </div>
+
+                <h2>
+                    Would you choose me on my happiest days
+                    AND my hardest days? 🥹❤️
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(8)">
+                        Yes. Always. ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(8)">
+                        Even when you're impossible 😜
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 9 -->
+
+            <div class="question" id="q9">
+
+                <div class="question-number">
+                    Question 9 of 12 💕
+                </div>
+
+                <h2>
+                    If I stole one kiss,
+                    would you forgive me? 💋
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(9)">
+                        I'll steal one back 😘
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(9)">
+                        Maybe... give me another 😂
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 10 -->
+
+            <div class="question" id="q10">
+
+                <div class="question-number">
+                    Question 10 of 12 💕
+                </div>
+
+                <h2>
+                    If we could make one wish together,
+                    would you wish for a lifetime of memories? 🌅
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(10)">
+                        With you, yes ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(10)">
+                        And unlimited dessert 🍰😂
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 11 -->
+
+            <div class="question" id="q11">
+
+                <div class="question-number">
+                    Question 11 of 12 💕
+                </div>
+
+                <h2>
+                    Can I be your favorite person to laugh with,
+                    dream with, and grow old with? 🌹
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="nextQuestion(11)">
+                        You already are ❤️
+                    </button>
+
+                    <button class="no"
+                        onclick="nextQuestion(11)">
+                        Come a little closer and ask again 😏
+                    </button>
+
+                </div>
+
+            </div>
+
+
+            <!-- QUESTION 12 -->
+
+            <div class="question" id="q12">
+
+                <div class="question-number">
+                    The Last Question... 💍
+                </div>
+
+                <h2>
+                    Are you ready for the most important
+                    question I've ever asked you? ❤️
+                </h2>
+
+                <div class="answers">
+
+                    <button class="yes"
+                        onclick="goProposal()">
+                        I'm Ready 💕
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     PROPOSAL
+========================= -->
+
+<section class="proposal" id="proposal">
+
+    <div class="container">
+
+        <div class="teddy">
+            🧸
+        </div>
+
+        <div class="ring">
+            💍
+        </div>
+
+        <div class="proposal-text">
+
+            I Have One Last Question...
+
+            <br><br>
+
+            Will You Be Mine Forever? ❤️
+
+        </div>
+
+        <div class="proposal-buttons">
+
+            <button id="yesBtn" onclick="sayYes()">
+                YES! ❤️
+            </button>
+
+            <button id="noBtn" onclick="moveNo()">
+                No 😢
+            </button>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+<!-- =========================
+     SUCCESS SCREEN
+========================= -->
+
+<div class="success" id="success">
+
+    <div class="success-box">
+
+        <div class="success-heart">
+            ❤️
+        </div>
+
+        <div class="kiss">
+            💋
+        </div>
+
+        <h1>
+            SHE SAID YES! 🥹❤️
+        </h1>
+
+        <p>
+            And just like that...
+        </p>
+
+        <p>
+            Our forever story begins. 💕
+        </p>
+
+        <br>
+
+        <p>
+            I promise to make you smile,
+            support your dreams,
+            annoy you sometimes 😜,
+            and love you every single day.
+        </p>
+
+        <br>
+
+        <h2>
+            I Love You Forever ❤️
+        </h2>
+
+        <p>
+            🧸 💍 🌹 💋
+        </p>
+
+    </div>
+
+</div>
+
+
+<!-- =========================
+     MUSIC BUTTON
+========================= -->
+
+<button
+    class="music-btn"
+    onclick="toggleMusic()"
+    id="musicButton">
+    🎵
+</button>
+
+
+<!--
+====================================================
+LOVE MUSIC
+====================================================
+
+Put your own romantic MP3 in the SAME folder as this
+index.html and name it:
+
+love-music.mp3
+
+Then remove the comments around the source below.
+
+Example:
+
+<source src="love-music.mp3" type="audio/mpeg">
+
+====================================================
+-->
+
+<audio id="music" loop preload="auto">
+    <!--
+    <source src="love-music.mp3" type="audio/mpeg">
+    -->
+</audio>
+
+
+<script>
+
+/* =========================
+   ROMANTIC QUOTES
+========================= */
+
+const loveQuotes = [
+
+    "You are the kind of person who makes ordinary moments feel extraordinary. ❤️",
+
+    "If home could be a person, I think it would look a lot like you. 🏡💕",
+
+    "I don't need a perfect life. I just want a beautiful life with you. 🌹",
+
+    "Somewhere between our little conversations and silly laughs, my heart found its favorite person. 🥰",
+
+    "I would choose your hand to hold through every chapter of my life. 🤝❤️",
+
+    "The best part of my day is knowing there is someone like you in my world. ✨",
+
+    "If I could keep one feeling forever, it would be the feeling of being close to you. 💖",
+
+    "Growing old sounds less scary when I imagine us laughing together. 👵🏻👴🏻❤️"
+
+];
+
+let quoteIndex = 0;
+
+function nextQuote(){
+
+    quoteIndex =
+        (quoteIndex + 1) %
+        loveQuotes.length;
+
+    document.getElementById("quoteText").textContent =
+        "“" + loveQuotes[quoteIndex] + "”";
+
+    document.getElementById("quoteAuthor").textContent =
+        "— From my heart ❤️";
+}
+
+
+/* =========================
+   QUESTIONS
+========================= */
+
+function nextQuestion(current){
+
+    const currentQuestion =
+        document.getElementById("q" + current);
+
+    const next =
+        document.getElementById("q" + (current + 1));
+
+    if(currentQuestion){
+
+        currentQuestion.classList.remove("active");
+
+    }
+
+    if(next){
+
+        next.classList.add("active");
+
+    }
+
+}
+
+
+/* =========================
+   GO TO PROPOSAL
+========================= */
+
+function goProposal(){
+
+    document
+        .getElementById("proposal")
+        .scrollIntoView({
+            behavior:"smooth"
+        });
+
+}
+
+
+/* =========================
+   MOVING NO BUTTON
+========================= */
+
+function moveNo(){
+
+    const button =
+        document.getElementById("noBtn");
+
+    const maxX =
+        Math.min(window.innerWidth - 160, 250);
+
+    const x =
+        Math.random() * maxX -
+        maxX / 2;
+
+    const y =
+        Math.random() * 150 -
+        75;
+
+    button.style.transform =
+        `translate(${x}px, ${y}px)`;
+
+}
+
+
+/* =========================
+   YES BUTTON
+========================= */
+
+function sayYes(){
+
+    document
+        .getElementById("success")
+        .classList.add("show");
+
+    createConfetti();
+
+    createHearts();
+
+    /* Try to start music after the user's click */
+    const music =
+        document.getElementById("music");
+
+    if(music.querySelector("source")){
+
+        music.play().catch(() => {});
+
+    }
+
+}
+
+
+/* =========================
+   CONFETTI
+========================= */
+
+function createConfetti(){
+
+    const symbols = [
+
+        "❤️",
+        "💕",
+        "💖",
+        "💗",
+        "💘",
+        "✨",
+        "🌹",
+        "💋",
+        "🥰"
+
+    ];
+
+    for(let i = 0; i < 180; i++){
+
+        const confetti =
+            document.createElement("div");
+
+        confetti.className =
+            "confetti";
+
+        confetti.innerHTML =
+            symbols[
+                Math.floor(
+                    Math.random() *
+                    symbols.length
+                )
+            ];
+
+        confetti.style.left =
+            Math.random() * 100 + "vw";
+
+        confetti.style.fontSize =
+            (Math.random() * 15 + 8) + "px";
+
+        confetti.style.animationDuration =
+            (Math.random() * 3 + 2) + "s";
+
+        confetti.style.animationDelay =
+            Math.random() * 1.5 + "s";
+
+        document.body.appendChild(confetti);
+
+        setTimeout(() => {
+
+            confetti.remove();
+
+        },6000);
+
+    }
+
+}
+
+
+/* =========================
+   FLOATING HEARTS
+========================= */
+
+function createHearts(){
+
+    setInterval(() => {
+
+        const heart =
+            document.createElement("div");
+
+        heart.className =
+            "heart";
+
+        heart.innerHTML =
+            [
+                "❤️",
+                "💕",
+                "💖",
+                "💗",
+                "💘"
+            ][
+                Math.floor(
+                    Math.random() * 5
+                )
+            ];
+
+        heart.style.left =
+            Math.random() * 100 + "vw";
+
+        heart.style.fontSize =
+            (Math.random() * 25 + 15) + "px";
+
+        heart.style.animationDuration =
+            (Math.random() * 4 + 4) + "s";
+
+        document.body.appendChild(heart);
+
+        setTimeout(() => {
+
+            heart.remove();
+
+        },8000);
+
+    },300);
+
+}
+
+
+/* =========================
+   MUSIC
+========================= */
+
+let musicPlaying = false;
+
+function toggleMusic(){
+
+    const music =
+        document.getElementById("music");
+
+    const button =
+        document.getElementById("musicButton");
+
+    if(!music.querySelector("source")){
+
+        alert(
+            "Add your romantic MP3 as love-music.mp3 in the same folder, then uncomment the <source> line in the HTML."
+        );
+
+        return;
+
+    }
+
+    if(musicPlaying){
+
+        music.pause();
+
+        button.innerHTML = "🎵";
+
+        musicPlaying = false;
+
+    }else{
+
+        music.play()
+        .then(() => {
+
+            button.innerHTML = "🔊";
+
+            musicPlaying = true;
+
+        })
+        .catch(() => {
+
+            alert(
+                "Tap the music button again to start the song."
+            );
+
+        });
+
+    }
+
+}
+
+
+/* =========================
+   AUTOMATIC HEARTS
+========================= */
+
+setInterval(() => {
+
+    const heart =
+        document.createElement("div");
+
+    heart.className =
+        "heart";
+
+    heart.innerHTML =
+        [
+            "❤️",
+            "💕",
+            "💗",
+            "💖"
+        ][
+            Math.floor(
+                Math.random() * 4
+            )
+        ];
+
+    heart.style.left =
+        Math.random() * 100 + "vw";
+
+    heart.style.fontSize =
+        (Math.random() * 20 + 12) + "px";
+
+    heart.style.animationDuration =
+        (Math.random() * 5 + 5) + "s";
+
+    document.body.appendChild(heart);
+
+    setTimeout(() => {
+
+        heart.remove();
+
+    },10000);
+
+},1200);
+
+</script>
+
+</body>
+</html>
